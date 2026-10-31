@@ -49,6 +49,9 @@
         `<code title="keccak256 of the full decision record">${short(last.hash)}</code>` + (model ? `<span class="muted">model: ${esc(model)}</span>` : "");
     } else {
       $("status").textContent = d.vault ? `Deployed on ${netName} · waiting for the first call` : "Vault not deployed yet";
+      $("l-action").hidden = true;
+      $("l-reason").textContent = d.vault ? "The first call lands with the next agent run (every 3 hours)." : "The first call lands once the vault is live on HashKey Chain mainnet. Until then, the market view below is live.";
+      $("l-price").textContent = d.now && d.now.view ? fmtUsd(d.now.view.wti_price, 2) : "–";
     }
 
     const s = d.stats;

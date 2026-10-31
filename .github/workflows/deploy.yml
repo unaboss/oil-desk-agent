@@ -1,0 +1,31 @@
+name: Deploy vault
+on:
+  workflow_dispatch:
+    inputs:
+      network:
+        description: "hashkey (mainnet, chain 177) or hashkeyTestnet (chain 133)"
+        type: choice
+        options: [hashkey, hashkeyTestnet]
+        default: hashkey
+permissions:
+  contents: write
+concurrency: { group: chain-writes, cancel-in-progress: false }
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --legacy-peer-deps
+      - run: npx hardhat test
+      - name: Deploy MandateVault (paper oil book)
+        env:
+          AGENT_KEY: ${{ secrets.AGENT_KEY }}
+        run: npx hardhat run scripts/deploy.js --network ${{ inputs.network }}
+      - name: Commit deployment address
+        run: |
+          git config user.name "oil-desk-bot"
+          git config user.email "oil-desk-bot@users.noreply.github.com"
+          git add deployments/
+          git commit -m "Deploy vault to ${{ inputs.network }}" && git push || echo "nothing to commit"

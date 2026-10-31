@@ -1,0 +1,42 @@
+# Secrets
+.env
+
+# Reference documents (not source)
+*.odt
+*.pdf
+
+# Cache
+**/_cache_*.json
+
+# Runtime-captured data (accumulates over time; not source)
+oil_dashboard/data/officials_statements.csv
+
+# Streamlit dev-server logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node / Hardhat
+node_modules
+artifacts/
+cache/
+deployments/localhost.json

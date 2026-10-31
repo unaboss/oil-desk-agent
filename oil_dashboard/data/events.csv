@@ -1,0 +1,25 @@
+date,label,impact,type
+20250115,OPEC Monthly Oil Market Report,medium,opec
+20250120,Trump Inauguration - Iran sanctions policy,high,geopolitical
+20250128,OPEC+ Joint Ministerial Monitoring Committee,high,opec
+20250204,US tariffs on Canada/Mexico crude announced,high,geopolitical
+20250212,EIA Short-Term Energy Outlook,medium,eia
+20250218,Ukraine drone strikes on Russian refineries,high,geopolitical
+20250303,OECD crude inventories report,low,inventory
+20250311,EIA Short-Term Energy Outlook,medium,eia
+20250318,OPEC+ full ministerial meeting,high,opec
+20250326,EIA Weekly - Major crude draw,medium,eia
+20250402,US tariff escalation - reciprocal tariffs,high,geopolitical
+20250408,OECD demand downgrade,medium,downgrade
+20250416,EIA Short-Term Energy Outlook,medium,eia
+20250422,OPEC+ compensation cuts announced,high,opec
+20250501,Gaza ceasefire impact on risk premium,medium,geopolitical
+20250514,EIA Short-Term Energy Outlook,medium,eia
+20250520,OPEC+ meeting - production policy review,high,opec
+20250604,US SPR refill program update,medium,spr
+20250611,EIA Short-Term Energy Outlook,medium,eia
+20250617,FOMC rate decision,high,fed
+20250625,EIA Weekly - Gasoline demand peak,medium,eia
+20250701,China stimulus package speculation,medium,china
+20250708,EIA Short-Term Energy Outlook,medium,eia
+20250716,OPEC+ Joint Ministerial Monitoring Committee,high,opec

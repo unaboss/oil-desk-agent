@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --legacy-peer-deps
+      - run: npx hardhat test
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip, cache-dependency-path: oil_dashboard/requirements.txt }
+      - run: pip install -r oil_dashboard/requirements.txt pytest
+      - name: Agent tests
+        run: python -m pytest -q
+      - name: Dashboard tests
+        working-directory: oil_dashboard
+        run: python -m pytest -q

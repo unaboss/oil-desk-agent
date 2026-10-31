@@ -5,6 +5,8 @@ const PK = KEY ? [KEY] : [];
 module.exports = {
   solidity: { version: "0.8.24", settings: { optimizer: { enabled: true, runs: 200 }, viaIR: true } },
   networks: {
+    // HH_INITIAL_DATE lets the demo-history script replay past days on a local node.
+    hardhat: process.env.HH_INITIAL_DATE ? { initialDate: process.env.HH_INITIAL_DATE } : {},
     hashkeyTestnet: { url: process.env.HSK_TESTNET_RPC || "https://testnet.hsk.xyz", chainId: 133, accounts: PK },
     hashkey: { url: process.env.HSK_RPC || "https://mainnet.hsk.xyz", chainId: 177, accounts: PK },
   },

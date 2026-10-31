@@ -1,0 +1,1091 @@
+{
+ "generated_at": "2026-10-31T10:29:48+00:00",
+ "sample": true,
+ "network": "localhost",
+ "explorer": "https://testnet-explorer.hsk.xyz",
+ "repo": "https://github.com/unaboss/oil-desk-agent",
+ "streamlit": "",
+ "now": {
+  "view": {
+   "asof": "2026-10-30",
+   "wti_price": 69.57194679414161,
+   "wti_change_5d": 0.06408749680652748,
+   "oil_volatility_ovx": 49.42648574803243,
+   "confluence_total": 2,
+   "confluence_direction": "bullish",
+   "signals": {
+    "volume": 1,
+    "cot": 1,
+    "inventories": 1,
+    "crack": -1,
+    "dxy": -1,
+    "curve": 1
+   },
+   "audit_hit_rate": 0.275,
+   "audit_signals": 51
+  },
+  "crowd": [
+   {
+    "question": "Will WTI close above $65 by end of November?",
+    "odds": {
+     "Yes": 0.31,
+     "No": 0.69
+    },
+    "volume_usd": 0,
+    "ends": null
+   },
+   {
+    "question": "Will crude oil hit $50 in 2026?",
+    "odds": {
+     "Yes": 0.08,
+     "No": 0.92
+    },
+    "volume_usd": 0,
+    "ends": null
+   }
+  ]
+ },
+ "wti": [
+  {
+   "d": "2026-05-04",
+   "c": 53.521
+  },
+  {
+   "d": "2026-05-05",
+   "c": 53.104
+  },
+  {
+   "d": "2026-05-06",
+   "c": 54.187
+  },
+  {
+   "d": "2026-05-07",
+   "c": 54.933
+  },
+  {
+   "d": "2026-05-08",
+   "c": 54.032
+  },
+  {
+   "d": "2026-05-11",
+   "c": 52.697
+  },
+  {
+   "d": "2026-05-12",
+   "c": 52.185
+  },
+  {
+   "d": "2026-05-13",
+   "c": 52.512
+  },
+  {
+   "d": "2026-05-14",
+   "c": 52.788
+  },
+  {
+   "d": "2026-05-15",
+   "c": 52.871
+  },
+  {
+   "d": "2026-05-18",
+   "c": 52.004
+  },
+  {
+   "d": "2026-05-19",
+   "c": 52.173
+  },
+  {
+   "d": "2026-05-20",
+   "c": 54.519
+  },
+  {
+   "d": "2026-05-21",
+   "c": 54.487
+  },
+  {
+   "d": "2026-05-22",
+   "c": 54.529
+  },
+  {
+   "d": "2026-05-25",
+   "c": 53.064
+  },
+  {
+   "d": "2026-05-26",
+   "c": 54.575
+  },
+  {
+   "d": "2026-05-27",
+   "c": 53.114
+  },
+  {
+   "d": "2026-05-28",
+   "c": 54.475
+  },
+  {
+   "d": "2026-05-29",
+   "c": 55.983
+  },
+  {
+   "d": "2026-06-01",
+   "c": 54.665
+  },
+  {
+   "d": "2026-06-02",
+   "c": 57.059
+  },
+  {
+   "d": "2026-06-03",
+   "c": 56.106
+  },
+  {
+   "d": "2026-06-04",
+   "c": 57.0
+  },
+  {
+   "d": "2026-06-05",
+   "c": 56.583
+  },
+  {
+   "d": "2026-06-08",
+   "c": 55.263
+  },
+  {
+   "d": "2026-06-09",
+   "c": 53.336
+  },
+  {
+   "d": "2026-06-10",
+   "c": 53.576
+  },
+  {
+   "d": "2026-06-11",
+   "c": 53.278
+  },
+  {
+   "d": "2026-06-12",
+   "c": 53.039
+  },
+  {
+   "d": "2026-06-15",
+   "c": 54.474
+  },
+  {
+   "d": "2026-06-16",
+   "c": 55.022
+  },
+  {
+   "d": "2026-06-17",
+   "c": 54.902
+  },
+  {
+   "d": "2026-06-18",
+   "c": 56.835
+  },
+  {
+   "d": "2026-06-19",
+   "c": 56.999
+  },
+  {
+   "d": "2026-06-22",
+   "c": 56.613
+  },
+  {
+   "d": "2026-06-23",
+   "c": 57.73
+  },
+  {
+   "d": "2026-06-24",
+   "c": 59.242
+  },
+  {
+   "d": "2026-06-25",
+   "c": 57.4
+  },
+  {
+   "d": "2026-06-26",
+   "c": 56.022
+  },
+  {
+   "d": "2026-06-29",
+   "c": 55.299
+  },
+  {
+   "d": "2026-06-30",
+   "c": 55.483
+  },
+  {
+   "d": "2026-07-01",
+   "c": 56.384
+  },
+  {
+   "d": "2026-07-02",
+   "c": 56.841
+  },
+  {
+   "d": "2026-07-03",
+   "c": 56.177
+  },
+  {
+   "d": "2026-07-06",
+   "c": 58.773
+  },
+  {
+   "d": "2026-07-07",
+   "c": 58.204
+  },
+  {
+   "d": "2026-07-08",
+   "c": 57.299
+  },
+  {
+   "d": "2026-07-09",
+   "c": 56.944
+  },
+  {
+   "d": "2026-07-10",
+   "c": 57.299
+  },
+  {
+   "d": "2026-07-13",
+   "c": 56.703
+  },
+  {
+   "d": "2026-07-14",
+   "c": 57.69
+  },
+  {
+   "d": "2026-07-15",
+   "c": 58.707
+  },
+  {
+   "d": "2026-07-16",
+   "c": 60.305
+  },
+  {
+   "d": "2026-07-17",
+   "c": 58.353
+  },
+  {
+   "d": "2026-07-20",
+   "c": 60.159
+  },
+  {
+   "d": "2026-07-21",
+   "c": 60.074
+  },
+  {
+   "d": "2026-07-22",
+   "c": 59.832
+  },
+  {
+   "d": "2026-07-23",
+   "c": 61.693
+  },
+  {
+   "d": "2026-07-24",
+   "c": 59.712
+  },
+  {
+   "d": "2026-07-27",
+   "c": 58.556
+  },
+  {
+   "d": "2026-07-28",
+   "c": 58.768
+  },
+  {
+   "d": "2026-07-29",
+   "c": 59.441
+  },
+  {
+   "d": "2026-07-30",
+   "c": 58.212
+  },
+  {
+   "d": "2026-07-31",
+   "c": 57.713
+  },
+  {
+   "d": "2026-08-03",
+   "c": 57.323
+  },
+  {
+   "d": "2026-08-04",
+   "c": 55.514
+  },
+  {
+   "d": "2026-08-05",
+   "c": 55.589
+  },
+  {
+   "d": "2026-08-06",
+   "c": 56.937
+  },
+  {
+   "d": "2026-08-07",
+   "c": 57.366
+  },
+  {
+   "d": "2026-08-10",
+   "c": 58.592
+  },
+  {
+   "d": "2026-08-11",
+   "c": 57.796
+  },
+  {
+   "d": "2026-08-12",
+   "c": 59.589
+  },
+  {
+   "d": "2026-08-13",
+   "c": 59.476
+  },
+  {
+   "d": "2026-08-14",
+   "c": 59.02
+  },
+  {
+   "d": "2026-08-17",
+   "c": 58.646
+  },
+  {
+   "d": "2026-08-18",
+   "c": 57.002
+  },
+  {
+   "d": "2026-08-19",
+   "c": 57.65
+  },
+  {
+   "d": "2026-08-20",
+   "c": 57.197
+  },
+  {
+   "d": "2026-08-21",
+   "c": 56.796
+  },
+  {
+   "d": "2026-08-24",
+   "c": 54.418
+  },
+  {
+   "d": "2026-08-25",
+   "c": 55.627
+  },
+  {
+   "d": "2026-08-26",
+   "c": 56.139
+  },
+  {
+   "d": "2026-08-27",
+   "c": 57.065
+  },
+  {
+   "d": "2026-08-28",
+   "c": 56.777
+  },
+  {
+   "d": "2026-08-31",
+   "c": 58.4
+  },
+  {
+   "d": "2026-09-01",
+   "c": 58.988
+  },
+  {
+   "d": "2026-09-02",
+   "c": 58.658
+  },
+  {
+   "d": "2026-09-03",
+   "c": 59.04
+  },
+  {
+   "d": "2026-09-04",
+   "c": 60.247
+  },
+  {
+   "d": "2026-09-07",
+   "c": 61.429
+  },
+  {
+   "d": "2026-09-08",
+   "c": 63.161
+  },
+  {
+   "d": "2026-09-09",
+   "c": 62.496
+  },
+  {
+   "d": "2026-09-10",
+   "c": 61.272
+  },
+  {
+   "d": "2026-09-11",
+   "c": 62.445
+  },
+  {
+   "d": "2026-09-14",
+   "c": 63.846
+  },
+  {
+   "d": "2026-09-15",
+   "c": 64.349
+  },
+  {
+   "d": "2026-09-16",
+   "c": 64.86
+  },
+  {
+   "d": "2026-09-17",
+   "c": 64.51
+  },
+  {
+   "d": "2026-09-18",
+   "c": 64.548
+  },
+  {
+   "d": "2026-09-21",
+   "c": 67.141
+  },
+  {
+   "d": "2026-09-22",
+   "c": 63.602
+  },
+  {
+   "d": "2026-09-23",
+   "c": 60.552
+  },
+  {
+   "d": "2026-09-24",
+   "c": 59.678
+  },
+  {
+   "d": "2026-09-25",
+   "c": 60.328
+  },
+  {
+   "d": "2026-09-28",
+   "c": 61.167
+  },
+  {
+   "d": "2026-09-29",
+   "c": 59.922
+  },
+  {
+   "d": "2026-09-30",
+   "c": 59.913
+  },
+  {
+   "d": "2026-10-01",
+   "c": 59.172
+  },
+  {
+   "d": "2026-10-02",
+   "c": 58.96
+  },
+  {
+   "d": "2026-10-05",
+   "c": 57.561
+  },
+  {
+   "d": "2026-10-06",
+   "c": 59.25
+  },
+  {
+   "d": "2026-10-07",
+   "c": 60.268
+  },
+  {
+   "d": "2026-10-08",
+   "c": 59.838
+  },
+  {
+   "d": "2026-10-09",
+   "c": 62.129
+  },
+  {
+   "d": "2026-10-12",
+   "c": 61.823
+  },
+  {
+   "d": "2026-10-13",
+   "c": 63.922
+  },
+  {
+   "d": "2026-10-14",
+   "c": 66.753
+  },
+  {
+   "d": "2026-10-15",
+   "c": 65.592
+  },
+  {
+   "d": "2026-10-16",
+   "c": 65.408
+  },
+  {
+   "d": "2026-10-19",
+   "c": 65.253
+  },
+  {
+   "d": "2026-10-20",
+   "c": 65.93
+  },
+  {
+   "d": "2026-10-21",
+   "c": 66.027
+  },
+  {
+   "d": "2026-10-22",
+   "c": 65.477
+  },
+  {
+   "d": "2026-10-23",
+   "c": 65.382
+  },
+  {
+   "d": "2026-10-26",
+   "c": 67.469
+  },
+  {
+   "d": "2026-10-27",
+   "c": 67.131
+  },
+  {
+   "d": "2026-10-28",
+   "c": 69.587
+  },
+  {
+   "d": "2026-10-29",
+   "c": 69.552
+  },
+  {
+   "d": "2026-10-30",
+   "c": 69.572
+  }
+ ],
+ "vault": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+ "mandate": {
+  "max_buy_usd": 2500.0,
+  "max_sell_bbl": 40.0,
+  "daily_usd": 5000.0,
+  "daily_bbl": 80.0,
+  "slippage_pct": 0.5,
+  "paused": false
+ },
+ "book": {
+  "barrels": 133.48931694772992,
+  "usd": 2795.507322,
+  "value": 12082.618978273771,
+  "start": 10000.0,
+  "mark_price": 69.57194679414161
+ },
+ "stats": {
+  "calls": 33,
+  "trades": 12,
+  "judged": 11,
+  "hits": 5,
+  "hit_rate": 0.45454545454545453,
+  "blocked": 1
+ },
+ "decisions": [
+  {
+   "id": 1,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 55.51435247,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 25%; no edge, staying put.",
+   "hash": "0x4c5ec4073ca35b20553ccf68c2db16749067dacd7b1bb9fea88d0e08d317b78d",
+   "tx": "0xda07f0f869e731daf8814918030bb979055c45f204b744944c9b9eab8635159f",
+   "block": 3,
+   "time": "2026-08-04T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 2,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 56.93665175,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 25%; no edge, staying put.",
+   "hash": "0xaf846e5f523b961dac19cdb0cae5f8603571e91be832c177cb992ca2ddda295d",
+   "tx": "0x6ae9a9ea964db670d740dd195b1526628a5f529e572fd6d160c4a359823e75a9",
+   "block": 4,
+   "time": "2026-08-06T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 3,
+   "action": "BUY",
+   "blocked": null,
+   "amount_in": 1250.0,
+   "amount_out": 21.334044717566456,
+   "confidence": 66,
+   "wti": 58.59179619,
+   "reason": "[rules] Confluence +2 bullish, audit hit rate 27%.",
+   "hash": "0x80198074c6aa6271f95deec0c7e2e13eb94e353b3536f874a045a4b6a4f6d5f5",
+   "tx": "0x778d891be079ae90b040e75d424a85d7f62733aa1178daa6494d278120aa3fdd",
+   "block": 5,
+   "time": "2026-08-10T15:00:00+00:00",
+   "right": true
+  },
+  {
+   "id": 4,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 59.58912278,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 29%; no edge, staying put.",
+   "hash": "0x7c5d7b8043db9cff6c036fa94e38807e69af96fbd1aaa4bec57486f8a984d2e3",
+   "tx": "0x02ac6f1a4ddfa92a2dde3585b30f6d114ff47cb9afedccf4b233d0bd08139ec4",
+   "block": 6,
+   "time": "2026-08-12T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 5,
+   "action": "BUY",
+   "blocked": null,
+   "amount_in": 2500.0,
+   "amount_out": 42.358750584428975,
+   "confidence": 82,
+   "wti": 59.01968225,
+   "reason": "[rules] Confluence +4 bullish, audit hit rate 29%.",
+   "hash": "0x122db06cfc4a839570b63705c082f558cec55dab8310ec14b704bdfcf5ad515a",
+   "tx": "0x3634a84998643db1230892945e8b83d041218cc3e98b326b02abcb85b191e000",
+   "block": 7,
+   "time": "2026-08-14T15:00:00+00:00",
+   "right": false
+  },
+  {
+   "id": 6,
+   "action": "BUY",
+   "blocked": null,
+   "amount_in": 1250.0,
+   "amount_out": 21.92908389697687,
+   "confidence": 66,
+   "wti": 57.0019252,
+   "reason": "[rules] Confluence +2 bullish, audit hit rate 29%.",
+   "hash": "0xb5a963e647aefac6c9238e20b103764bf6ed1207ff00f69ad999c1313210c105",
+   "tx": "0xf6d6a8ee0ad185e23fa1e59d64e558cb14a4dc39fe93d7cc9818910cc8d39be6",
+   "block": 8,
+   "time": "2026-08-18T15:00:00+00:00",
+   "right": false
+  },
+  {
+   "id": 7,
+   "action": "BUY",
+   "blocked": null,
+   "amount_in": 2500.0,
+   "amount_out": 43.70827258305229,
+   "confidence": 82,
+   "wti": 57.19741029,
+   "reason": "[rules] Confluence +4 bullish, audit hit rate 28%.",
+   "hash": "0x8f5ac76a07cd64ec5f1854e15d64b2b57b4fea6b3625281456943fe8bf4ca77f",
+   "tx": "0xf6acf5f33e9c4255ba5f985d0f8fc346df4226b6d2026183b6f5808c27b09c2c",
+   "block": 9,
+   "time": "2026-08-20T15:00:00+00:00",
+   "right": false
+  },
+  {
+   "id": 8,
+   "action": "BUY",
+   "blocked": null,
+   "amount_in": 1250.0,
+   "amount_out": 22.970480351784783,
+   "confidence": 66,
+   "wti": 54.41766915,
+   "reason": "[rules] Confluence +2 bullish, audit hit rate 28%.",
+   "hash": "0xa5f024de1a7a31df97774db4bd88e16b619ef547e8f21fd1cdd2d0a46873312b",
+   "tx": "0x88af538f9bc35be92538bfe02ea5db4959255000b8ae20f6b6be7e652a34c92d",
+   "block": 10,
+   "time": "2026-08-24T15:00:00+00:00",
+   "right": true
+  },
+  {
+   "id": 9,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 56.13850544,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 28%; no edge, staying put.",
+   "hash": "0xfd7c9ca7896d2aa170ba3196f02b664c6fb761535282a3fd4c55a8c89130a52a",
+   "tx": "0x1f8890a0498afe723cde32098887f378eff8b90d4b3414a8627ce07b6b965de1",
+   "block": 11,
+   "time": "2026-08-26T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 10,
+   "action": "BUY",
+   "blocked": null,
+   "amount_in": 1250.0,
+   "amount_out": 22.016025497367124,
+   "confidence": 66,
+   "wti": 56.77682378,
+   "reason": "[rules] Confluence +2 bullish, audit hit rate 28%.",
+   "hash": "0x20a41962b0e117507db593902d5be8c90b434999a97c07d00f0fe53b78b3e851",
+   "tx": "0x4e7547b574322d8495a6f02f01ca8df5c4c68f4276911219717aeec27532c687",
+   "block": 12,
+   "time": "2026-08-28T15:00:00+00:00",
+   "right": true
+  },
+  {
+   "id": 11,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 58.98764645,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 28%; no edge, staying put.",
+   "hash": "0x9fbb88f5a6bc38d6fdf58fc00fa1c9c0578a2aa77943f8ea68a37c8eb71e4af9",
+   "tx": "0xe4933c4592c5abd3a0098e3e51c89d7bd523433d1ec501426062bcddacd02f47",
+   "block": 13,
+   "time": "2026-09-01T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 12,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 66,
+   "wti": 59.04007321,
+   "reason": "[rules] (fully invested, too little cash left) Confluence +2 bullish, audit hit rate 28%.",
+   "hash": "0x6b53094e2183621e51ac3806ecb846c7f07f2dd2241591ad9c62c2efbc9924e6",
+   "tx": "0xc87f4360aedd52d8efa90e9702ea7462f72c3a0ca26fd9c6ec446a5932a6db69",
+   "block": 14,
+   "time": "2026-09-03T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 13,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 61.42905364,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 27%; no edge, staying put.",
+   "hash": "0xef7f6c447160a9ad247d2cf7fe3d393841423384565e551209be2010e05f6a7d",
+   "tx": "0xf06296f4075ff3ec5d243f9d78e36e0788dc2c6890ed2566f1f6ea7c3e3cdc14",
+   "block": 15,
+   "time": "2026-09-07T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 14,
+   "action": "SELL",
+   "blocked": null,
+   "amount_in": 20.0,
+   "amount_out": 1249.9186634,
+   "confidence": 66,
+   "wti": 62.49593317,
+   "reason": "[rules] Confluence -2 bearish, audit hit rate 27%; cutting long exposure.",
+   "hash": "0xf50d401d41c221e35ac50cc1e883fd29950f7f4596acd848cc21f7d79b0500c8",
+   "tx": "0xef47c9e0a87df48f9ad44ff2563b711812fcf34abb0d8fb9f24a035747ca42c6",
+   "block": 16,
+   "time": "2026-09-09T15:00:00+00:00",
+   "right": false
+  },
+  {
+   "id": 15,
+   "action": "BUY",
+   "blocked": null,
+   "amount_in": 1249.9186634,
+   "amount_out": 20.01635524312482,
+   "confidence": 66,
+   "wti": 62.44486812,
+   "reason": "[rules] Confluence +2 bullish, audit hit rate 27%.",
+   "hash": "0xf663e6903fb08273e79def09b1d26a95ec50b7ae7a84c4fe36bbb8b1d10fc1a4",
+   "tx": "0xe3d36d4189c0baf9827f674bb9cd1a5337a42c9c75e8e648aac145f6217023b7",
+   "block": 17,
+   "time": "2026-09-11T15:00:00+00:00",
+   "right": true
+  },
+  {
+   "id": 16,
+   "action": "BUY",
+   "blocked": "trade size above mandate",
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 99,
+   "wti": 64.34851317,
+   "reason": "[mandate test] Deliberate order for 3x the per-trade cap, sent to show the vault refuses it.",
+   "hash": "0x4c8fc7b4d9d11823952e5219c675ead8f6b0ef854a7a09986eabd40c99db9a3e",
+   "tx": "0x7caf237ce5233320aac117c4c240b54471c38e82cafc7db8161f753ba69a29ee",
+   "block": 18,
+   "time": "2026-09-15T14:55:00+00:00",
+   "right": null
+  },
+  {
+   "id": 17,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 64.34851317,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 29%; no edge, staying put.",
+   "hash": "0x51ba11195bad6be06022448845a204e15ba27dce3602e8eea969497e35936dba",
+   "tx": "0x9162072c97b42aa1a5d54e596d7720cbf5c368fae05fa780cfeb39f02f9c050b",
+   "block": 19,
+   "time": "2026-09-15T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 18,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 66,
+   "wti": 64.50957119,
+   "reason": "[rules] (fully invested, too little cash left) Confluence +2 bullish, audit hit rate 29%.",
+   "hash": "0x68edea7f6ff1212f7655ac7a954d6ac75d16d6c18fe1be854c5dc8972b39c2b5",
+   "tx": "0x7bf95fcb09f04622a097eaabdc26f68838323e3015758925b18869cfeaeb1931",
+   "block": 20,
+   "time": "2026-09-17T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 19,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 66,
+   "wti": 67.1411478,
+   "reason": "[rules] (fully invested, too little cash left) Confluence +2 bullish, audit hit rate 30%.",
+   "hash": "0x2b3ca933f262a16a37eae298c72018580c1411a7501c1112cf9f5cc5e478e25c",
+   "tx": "0x57c8d50bff3b1c8e6d34bfd2b855b54c9c45841cf41d719a098f8dfc281bba57",
+   "block": 21,
+   "time": "2026-09-21T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 20,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 82,
+   "wti": 60.55239998,
+   "reason": "[rules] (fully invested, too little cash left) Confluence +4 bullish, audit hit rate 30%.",
+   "hash": "0xd53ccfd16404b1c1bfe55b118d0bd26dfd8a6d78a66c430f01890bd8d9367ecd",
+   "tx": "0x3c07fe87b0b7a1d88c9b24c9604293fffe1ad2160561909d811ff8f0183c4798",
+   "block": 22,
+   "time": "2026-09-23T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 21,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 66,
+   "wti": 60.32840711,
+   "reason": "[rules] (fully invested, too little cash left) Confluence +2 bullish, audit hit rate 30%.",
+   "hash": "0x1c6faa0cfae5a2104d3ca37156855d90e042511d6b0731188bd4c4b0f3779687",
+   "tx": "0x31fc36a90f271786db8fd6d68d81b192880e15e7d0e401abefe9d03b1142b62e",
+   "block": 23,
+   "time": "2026-09-25T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 22,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 82,
+   "wti": 59.92195731,
+   "reason": "[rules] (fully invested, too little cash left) Confluence +4 bullish, audit hit rate 30%.",
+   "hash": "0xd342c20318c82b80cabb7d6aa32e4bd404f177cb472de255fdb120a5cf33f2c9",
+   "tx": "0x74ad2ff6bf7f6c863582d5678a7465812be872fa853e3dae8976500e25f73200",
+   "block": 24,
+   "time": "2026-09-29T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 23,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 98,
+   "wti": 59.1720067,
+   "reason": "[rules] (fully invested, too little cash left) Confluence +6 bullish, audit hit rate 29%.",
+   "hash": "0xd9840604d1972e0a852e2527d9cf75ba1957aebcbabc7a067b98abac4669e68d",
+   "tx": "0x90d7ac15ec5b12b6872c3ebfe18608f98611374d8f93d45bff9c352d4e2e433e",
+   "block": 25,
+   "time": "2026-10-01T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 24,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 82,
+   "wti": 57.56142067,
+   "reason": "[rules] (fully invested, too little cash left) Confluence +4 bullish, audit hit rate 28%.",
+   "hash": "0xaad4c99adbccf7b5c54934eddc84434c4fe00a6ada48081bfe05098f59855986",
+   "tx": "0x95baa9754c022ec1fe3cfb212bab3bdf9be6400f3a12a8b5d9c328eefdbc75de",
+   "block": 26,
+   "time": "2026-10-05T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 25,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 60.2678834,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 28%; no edge, staying put.",
+   "hash": "0x44e6e3b935502e6fab75072bc834530a930628a2934dd5c1f79150f8bb3b895f",
+   "tx": "0x99e4e9251885c52a9456c74ff0150a727b2a5ad933611a9afae75294b1ab6575",
+   "block": 27,
+   "time": "2026-10-07T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 26,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 62.12906734,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 30%; no edge, staying put.",
+   "hash": "0x39f1e7a0f36a8f57dd74d7401dd30db6dd2fa2fbaba18c853a27c97b7900cb2d",
+   "tx": "0x24340447f97e269d5888854ede44a8ac8e05d98fbd63bcf17c91957ab911886b",
+   "block": 28,
+   "time": "2026-10-09T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 27,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 63.92154328,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 29%; no edge, staying put.",
+   "hash": "0x7aec764b3999b8a59d57878269e8bdf287b1634c28d0994d86f69b62b5b9a2ba",
+   "tx": "0xd4fc0606df3a13ec3a8f9e60918c4be1cfcc8788cc63011ebd567268c5b0e1fd",
+   "block": 29,
+   "time": "2026-10-13T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 28,
+   "action": "SELL",
+   "blocked": null,
+   "amount_in": 20.0,
+   "amount_out": 1311.8437278,
+   "confidence": 66,
+   "wti": 65.59218639,
+   "reason": "[rules] Confluence -2 bearish, audit hit rate 28%; cutting long exposure.",
+   "hash": "0xaeb06b5d2b0a4b73d3476aaac2dac9a9ac08134c71a603b4d10dfecb4f48ca16",
+   "tx": "0x98d19b7eeca6f1bd8b045f6f644fb8877e1e96f9f610186c318335653a0e040f",
+   "block": 30,
+   "time": "2026-10-15T15:00:00+00:00",
+   "right": false
+  },
+  {
+   "id": 29,
+   "action": "BUY",
+   "blocked": null,
+   "amount_in": 1250.0,
+   "amount_out": 19.15630407342859,
+   "confidence": 66,
+   "wti": 65.25267062,
+   "reason": "[rules] Confluence +2 bullish, audit hit rate 28%.",
+   "hash": "0x83b7ff9f458fefc146379d5f7ea873bb7e2f52ab23ad24f326e9e078e0ee8f2b",
+   "tx": "0x7e2e03a0d83c2c9a2e0e1900699fd218b2bd447be6904dfbf4e658e98379e2d3",
+   "block": 31,
+   "time": "2026-10-19T15:00:00+00:00",
+   "right": true
+  },
+  {
+   "id": 30,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 66,
+   "wti": 66.02716993,
+   "reason": "[rules] (fully invested, too little cash left) Confluence +2 bullish, audit hit rate 28%.",
+   "hash": "0x882adb8875d1ad175e987e005420e411bf3ee9c4aad93e2c6ea3c460e923376d",
+   "tx": "0x79620d44a279c12c7feaeb8eeebabb6a1b4bf287bfc520a09b9a901bc0096c26",
+   "block": 32,
+   "time": "2026-10-21T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 31,
+   "action": "HOLD",
+   "blocked": null,
+   "amount_in": 0.0,
+   "amount_out": 0.0,
+   "confidence": 55,
+   "wti": 65.38179144,
+   "reason": "[rules] Confluence +0 (neutral), audit hit rate 28%; no edge, staying put.",
+   "hash": "0x62e6207080962c7ec7bea3f16ec5e466e996bcd4054386fe96ca23eceedfe97f",
+   "tx": "0x0578a7df10bc64b1f103a63e77888a0c365050f0f3bc90efb61211d6821b805b",
+   "block": 33,
+   "time": "2026-10-23T15:00:00+00:00",
+   "right": null
+  },
+  {
+   "id": 32,
+   "action": "SELL",
+   "blocked": null,
+   "amount_in": 20.0,
+   "amount_out": 1342.614841,
+   "confidence": 66,
+   "wti": 67.13074205,
+   "reason": "[rules] Confluence -2 bearish, audit hit rate 28%; cutting long exposure.",
+   "hash": "0xa3e53d4f05721374cc55d7d7b7763521080e3c6b6340b599f5ea1dce3f447e0f",
+   "tx": "0x3c9a11754888451cb73d2e8babe124096cab70041c8b55382cfd5c64b92bf416",
+   "block": 34,
+   "time": "2026-10-27T15:00:00+00:00",
+   "right": false
+  },
+  {
+   "id": 33,
+   "action": "SELL",
+   "blocked": null,
+   "amount_in": 20.0,
+   "amount_out": 1391.0487532,
+   "confidence": 66,
+   "wti": 69.55243766,
+   "reason": "[rules] Confluence -2 bearish, audit hit rate 28%; cutting long exposure.",
+   "hash": "0x2b58b2706a283f8ad0e5dc691d52db185842f1d480deeb1f6a3c2dd6a6c7975b",
+   "tx": "0x0ac2ff3292e9b6cf37420657c9ceb81fa7b3d0b3fbb947408171de8ff78311c9",
+   "block": 35,
+   "time": "2026-10-29T15:00:00+00:00",
+   "right": null
+  }
+ ]
+}

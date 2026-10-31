@@ -89,7 +89,7 @@ def decide(view, crowd, portfolio):
             "temperature": 0.2,
             "max_tokens": 600,
             "messages": [{"role": "user", "content": PROMPT.format(
-                view=json.dumps(view), crowd=json.dumps(crowd), portfolio=json.dumps(portfolio))}],
+                view=json.dumps(view), crowd=json.dumps(crowd), portfolio=json.dumps({k: round(v, 4) for k, v in portfolio.items() if not k.startswith("_")}))}],
         }
         r = requests.post(f"{base}/chat/completions", json=body,
                           headers={"Authorization": f"Bearer {key}"}, timeout=90)

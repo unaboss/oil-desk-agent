@@ -41,6 +41,7 @@ def main():
     portfolio, mandate = chain.read_state(vault)
     decision, model, raw = brain.decide(view, crowd_view, portfolio)
     amounts = chain.size_order(decision, view["wti_price"], portfolio, mandate)
+    decision, amounts = chain.finalise(decision, amounts)
 
     record = {
         "time": datetime.now(timezone.utc).isoformat(timespec="seconds"),

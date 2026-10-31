@@ -47,7 +47,7 @@ def render_confluence_tab(market_data, eia_data, cot_data):
 
     # Confluence gauge
     fig = go.Figure(go.Indicator(
-        mode="gauge+delta",
+        mode="gauge+number",  # "delta" with no reference rendered a bare dash
         value=total,
         domain={"x": [0, 1], "y": [0, 1]},
         gauge={

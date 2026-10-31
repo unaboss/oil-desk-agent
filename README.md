@@ -2,6 +2,8 @@
 
 Built for the **HashKey Chain Horizon Hackathon (AI Agent Trading track)**.
 
+**Live page:** https://unaboss.github.io/oil-desk-agent/ (every on-chain call, the chart, the mandate). Before the mainnet vault has calls, it offers a clearly labelled sample replay ([preview](https://unaboss.github.io/oil-desk-agent/?sample)).
+
 Trading-signal groups sell "track records" made of screenshots. Trading bots get full control of your funds. **Oil Desk fixes both:**
 
 1. **Analyse.** Every cycle the agent runs the Oil Dashboard's **6-signal confluence engine** for WTI crude (volume, CFTC COT positioning, EIA inventories, crack spread, US dollar, Brent-WTI curve). It also runs the engine's own **historical hit-rate audit**.
@@ -16,10 +18,11 @@ HashKey Chain has no tokenised oil yet, and on-chain DEX liquidity is very thin.
 ## Layout
 | Path | What |
 |---|---|
+| `site/` | The public Oil Desk page (static, GitHub Pages). `agent/export_site.py` refreshes its data after every agent run |
 | `oil_dashboard/` | The Oil Dashboard (Streamlit): data fetchers, confluence engine, audit, 12 tabs including **0. Oil Desk Agent** |
 | `agent/` | The agent: `oil_view.py` (confluence + audit), `crowd.py` (Polymarket), `brain.py` (LLM + rules), `chain.py` (web3), `run.py` (one cycle) |
 | `contracts/MandateVault.sol` | Mandate enforcement, paper or live execution, on-chain decision log |
-| `.github/workflows/` | CI, a one-click vault deploy, and the agent on a 3-hour schedule |
+| `.github/workflows/` | CI, a one-click vault deploy, the agent on a 3-hour schedule, and the page publisher |
 | `records/` | Full JSON record of every decision; its hash is on-chain |
 | `deployments/` | Vault address per network |
 

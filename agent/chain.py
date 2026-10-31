@@ -39,7 +39,14 @@ def read_state(vault):
     base, quote = vault.functions.balances().call()
     m = vault.functions.mandate().call()
     mandate = dict(zip(["maxTradeQuote", "maxTradeBase", "dailyCapQuote", "dailyCapBase", "maxSlippageBps", "paused"], m))
-    return {"barrels": base / E18, "usd": quote / E18}, mandate
+    # exact balances ride along under "_" keys (kept out of the LLM prompt) so sizing never
+    # spends a float-rounded amount the vault doesn't hold
+    return {"barrels": base / E18, "usd": quote / E18, "_barrels_wei": base, "_usd_wei": quote}, mandate
+
+
+def _floor_units(x):
+    """Float balance -> 1e18 units, rounded down to a millionth (fallback when exact wei is unknown)."""
+    return max(0, int(x * 1e6)) * 10**12
 
 
 def size_order(decision, price, portfolio, mandate):
@@ -51,15 +58,27 @@ def size_order(decision, price, portfolio, mandate):
     p = int(round(price * 1e8))  # USD per barrel, 1e8
     if decision["action"] == "BUY":
         amount_in = mandate["maxTradeQuote"] * int(decision["fraction"] * 1000) // 1000
-        amount_in = min(amount_in, int(portfolio["usd"] * E18))
+        amount_in = min(amount_in, portfolio.get("_usd_wei", _floor_units(portfolio["usd"])))
         expected = amount_in * 10**8 // p
     else:
         amount_in = mandate["maxTradeBase"] * int(decision["fraction"] * 1000) // 1000
-        amount_in = min(amount_in, int(portfolio["barrels"] * E18))
+        amount_in = min(amount_in, portfolio.get("_barrels_wei", _floor_units(portfolio["barrels"])))
         expected = amount_in * p // 10**8
+    cap = mandate["maxTradeQuote"] if decision["action"] == "BUY" else mandate["maxTradeBase"]
+    if amount_in < cap // 10:  # under a tenth of a full ticket isn't worth a trade (finalise turns it into a HOLD)
+        return 0, 0, 0
     bps = mandate["maxSlippageBps"]
     min_out = (expected * (10_000 - bps) + 9_999) // 10_000  # round up: passes the on-chain check exactly
     return amount_in, expected, min_out
+
+
+def finalise(decision, amounts):
+    """A BUY with no cash left, or a SELL with nothing to sell, becomes an honest HOLD."""
+    if decision["action"] != "HOLD" and amounts[0] == 0:
+        why = "fully invested, too little cash left" if decision["action"] == "BUY" else "too few barrels to sell"
+        return {**decision, "action": "HOLD", "fraction": 0.0,
+                "reason": f"({why}) {decision['reason']}"[:260]}, (0, 0, 0)
+    return decision, amounts
 
 
 def submit(w3, vault, account, decision, amounts, price, rationale_hash, rationale):
@@ -67,10 +86,14 @@ def submit(w3, vault, account, decision, amounts, price, rationale_hash, rationa
     fn = vault.functions.decide(ACTION_CODE[decision["action"]], amount_in, expected, min_out,
                                 decision["confidence"], int(round((price or 0) * 1e8)),
                                 rationale_hash, rationale)
+    # Estimate, then pad: a decision that lands just after UTC midnight takes the
+    # daily-counter reset path, which costs more than the estimate made a moment earlier.
+    gas = int(fn.estimate_gas({"from": account.address}) * 1.3) + 25_000
     tx = fn.build_transaction({
         "from": account.address,
         "nonce": w3.eth.get_transaction_count(account.address),
         "chainId": w3.eth.chain_id,
+        "gas": gas,
     })
     signed = account.sign_transaction(tx)
     h = w3.eth.send_raw_transaction(signed.raw_transaction)

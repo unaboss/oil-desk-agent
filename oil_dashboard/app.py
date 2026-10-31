@@ -19,6 +19,8 @@ st.set_page_config(
 )
 
 from config import ROOT_DIR
+from data import demo_mode
+_DEMO = demo_mode.install()
 from ui.sidebar import render_sidebar, render_sidebar_score
 from ui.charts_price import render_price_tab
 from ui.charts_curve import render_curve_tab
@@ -35,7 +37,7 @@ from ui.charts_agent import render_agent_tab
 
 from data.fetcher_yfinance import get_all_market_data
 from data.fetcher_eia import get_all_eia_data
-from data.fetcher_cot import get_cot_data
+import data.fetcher_cot as _fetcher_cot
 from data.fetcher_aaa import get_aaa_gas_price
 from data.fetcher_trends import get_google_trends
 from data.fetcher_bots import get_bot_mentions
@@ -54,7 +56,7 @@ def load_eia_data(start, end):
 
 @st.cache_data(ttl=86400)
 def load_cot_data():
-    return get_cot_data()
+    return _fetcher_cot.get_cot_data()  # module lookup so demo mode can swap it
 
 
 @st.cache_data(ttl=86400)
@@ -92,6 +94,9 @@ def main():
         st.title("Oil Dashboard")
     with col_ref:
         st.caption("")
+
+    if _DEMO:
+        st.warning(demo_mode.banner_text())
 
     score_placeholder = st.sidebar.empty()
     start_date, end_date = render_sidebar()

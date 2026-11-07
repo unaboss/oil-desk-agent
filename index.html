@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oil Desk · verifiable AI oil-trading agent</title>
+<meta name="description" content="An AI oil-trading agent on HashKey Chain. Every call is recorded on-chain before the outcome is known, so its track record can't be faked.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3c5 7 9 11.5 9 16.5A9 9 0 0 1 7 19.5C7 14.5 11 10 16 3z' fill='%23f5a524'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sample" class="sample" hidden>Sample data: generated prices replayed on a local test chain, to show how the page looks with a track record. <a id="to-live" href="./" hidden>Back to live</a></div>
+<div id="preview" class="sample preview" hidden>The vault isn't on HashKey mainnet yet, so there are no calls to show. <a href="?sample">Preview with a sample track record</a></div>
+
+<header class="wrap top">
+  <a class="brand" href="#"><span class="drop" aria-hidden="true"></span>Oil Desk</a>
+  <nav>
+    <a href="#calls">Calls</a>
+    <a href="#how">How it works</a>
+    <a id="nav-repo" href="#" target="_blank" rel="noopener">GitHub</a>
+    <a id="nav-workbench" href="#" target="_blank" rel="noopener" hidden>Analyst workbench</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <p class="eyebrow"><span class="live-dot" id="live-dot"></span><span id="status">Loading…</span></p>
+      <h1>An AI oil-trading agent with a track record <em>nobody can fake.</em></h1>
+      <p class="lede">Signal groups sell screenshots. Oil Desk writes every call to HashKey Chain <strong>before</strong> the market moves, inside limits a smart contract enforces. Then it scores itself in public.</p>
+    </div>
+    <aside class="latest card" id="latest" aria-live="polite">
+      <p class="label">Latest call</p>
+      <div class="latest-head"><span class="pill" id="l-action">–</span><span class="muted" id="l-when"></span></div>
+      <p class="latest-reason" id="l-reason">–</p>
+      <div class="latest-meta">
+        <span>WTI <b id="l-price">–</b></span>
+        <span>Confidence <b id="l-conf">–</b></span>
+      </div>
+      <div class="proof" id="l-proof"></div>
+    </aside>
+  </section>
+
+  <section class="kpis" id="kpis">
+    <div class="kpi"><p class="label">Verified hit rate</p><p class="big" id="k-hit">–</p><p class="muted" id="k-hit-sub">BUY right if WTI is higher 3 trading days later</p></div>
+    <div class="kpi"><p class="label">Calls on-chain</p><p class="big" id="k-calls">–</p><p class="muted" id="k-calls-sub"></p></div>
+    <div class="kpi"><p class="label">Paper book value</p><p class="big" id="k-value">–</p><p class="muted" id="k-value-sub"></p></div>
+    <div class="kpi"><p class="label">Blocked by mandate</p><p class="big" id="k-blocked">–</p><p class="muted">attempts the contract refused</p></div>
+  </section>
+
+  <section class="card chart-card">
+    <div class="chart-head">
+      <div><p class="label">WTI crude, with every on-chain call</p><p class="muted small" id="chart-sub"></p></div>
+      <ul class="legend">
+        <li><i class="m buy"></i>Buy</li><li><i class="m sell"></i>Sell</li><li><i class="m hold"></i>Hold</li><li><i class="m blocked"></i>Blocked</li>
+      </ul>
+    </div>
+    <div class="chart-box"><canvas id="chart" aria-label="WTI price chart with agent decisions" role="img"></canvas></div>
+  </section>
+
+  <section class="grid2">
+    <div class="card">
+      <p class="label">What the agent sees now</p>
+      <h3 class="h3"><span id="conf-total">–</span> <span class="muted" id="conf-dir"></span></h3>
+      <p class="muted small">A 6-signal confluence engine. Each signal votes +1 (bullish), −1 (bearish) or 0.</p>
+      <ul class="signals" id="signals"></ul>
+      <p class="muted small" id="audit-line"></p>
+    </div>
+    <div class="card">
+      <p class="label">What the crowd thinks</p>
+      <h3 class="h3">Polymarket oil odds</h3>
+      <p class="muted small">Live prediction-market odds, fed to the agent as sentiment, not as truth.</p>
+      <ul class="crowd" id="crowd"></ul>
+    </div>
+  </section>
+
+  <section id="calls" class="card">
+    <div class="table-head">
+      <p class="label">Every call, newest first</p>
+      <p class="muted small">Each row links to its transaction and to the full decision record whose keccak256 hash is on-chain.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>When (UTC)</th><th>Call</th><th class="num">Size</th><th class="num">WTI</th><th class="num">Conf.</th><th>Result</th><th>Agent's reasoning</th><th>Proof</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="9" class="muted">Loading…</td></tr></tbody>
+      </table>
+    </div>
+    <button class="more" id="more" type="button" hidden></button>
+  </section>
+
+  <section id="how" class="how">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><span>1</span><h4>Analyse</h4><p>Six market signals (volume, CFTC positioning, EIA inventories, crack spread, dollar, Brent-WTI curve) plus the engine's own historical hit rate.</p></li>
+      <li><span>2</span><h4>Ask the crowd</h4><p>Polymarket odds on oil-price questions add live sentiment.</p></li>
+      <li><span>3</span><h4>Decide</h4><p>An LLM (DeepSeek V4 Flash) weighs the inputs and returns buy, sell or hold with a reason that cites its numbers. If the model is down, fixed rules take over.</p></li>
+      <li><span>4</span><h4>Act within a mandate</h4><p>The vault contract caps trade size, daily volume and slippage, and can be paused. The agent can't exceed them.</p></li>
+      <li><span>5</span><h4>Prove it</h4><p>The call, its price and the hash of the full record land on-chain in one transaction, before anyone knows the outcome.</p></li>
+    </ol>
+    <div class="card mandate" id="mandate"></div>
+    <p class="note"><strong>Honest scope:</strong> HashKey Chain has no tokenised oil yet, so v1 trades a <em>paper</em> oil book held in the contract at real WTI prices. The limits, the log and the track record are real. Live execution is built in: point the vault at a DEX router and the same call swaps real tokens.</p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>Oil Desk · built for the HashKey Chain Horizon Hackathon by North Tech Africa</span>
+  <span id="foot-updated"></span>
+</footer>
+
+<script src="vendor/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
